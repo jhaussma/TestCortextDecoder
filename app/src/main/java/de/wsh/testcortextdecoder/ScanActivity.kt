@@ -213,6 +213,7 @@ class ScanActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks,
     override fun receivedDecodedData(barcode: String?, type: SymbologyType?) {
         Log.d(TAG, "receivedDecodedData")
         runOnUiThread(Runnable { showBarcodeResult(barcode, type) })
+        doStopDecoding()
 
     }
 
